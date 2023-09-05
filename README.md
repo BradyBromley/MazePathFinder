@@ -1,1 +1,1 @@
-# MazePathFinder
+# MazePathfinding
