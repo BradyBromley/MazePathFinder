@@ -78,11 +78,21 @@ def astar(start, target, maze):
 
 def printSolution(path, maze):
     if (path):
+        # Add the path to the maze
         for step in path:
             maze[step[0]][step[1]] = 2
-        print(path)
+        
+        # Display the maze in a nicer way
         for row in maze:
-            print(row)
+            for space in row:
+                if (space == 0):
+                    print(". ", end="")
+                elif (space == 1):
+                    print("# ", end="")
+                else:
+                    print("o ", end="")
+            print("")
+
     else:
         print("There is no path")
     
